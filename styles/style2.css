@@ -1,0 +1,76 @@
+#weather {
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+}
+
+#weather h2 {
+  color: rgb(18, 33, 36);
+}
+
+#weather.default-weather {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+#weather.clear {
+  background: linear-gradient(to right, #ff7300, #fecc00);
+}
+
+#weather.cloudy {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+#weather.rain {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+#weather.snow {
+  background: linear-gradient(to right, #e6dada, #274046);
+}
+
+#weather.thunderstorm {
+  background: linear-gradient(to right, #373b44, #4286f4);
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#citySuggestions {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: 1px none #ccc;
+  background-color: #fff;
+  position: relative;
+  /* z-index: 1000; */
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+#weatherResult {
+  margin-top: 20px;
+}

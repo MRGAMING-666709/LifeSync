@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Sync</title>
+    <link rel="stylesheet" href="./styles/style1.css">
+    <link rel="stylesheet" href="./styles/style2.css">
+    <link rel="stylesheet" href="./styles/style3.css">
+    <link rel="stylesheet" href="./styles/style4.css">
+    <link rel="icon" type="image/x-icon" href="assets/Life Sync.jpg">
+</head>
+<body>
+  <header style="display: flex;">
+    <img src="./assets/Life Sync.jpg" alt="Life Sync Logo" style="width: 120px">
+    <nav>
+      <a id="display-task-manager" href="#">TASK MANAGER</a>
+      <a id="display-weather" href="#weather">WEATHER</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="weather-related-suggestions"></div>
+    <div id="nav-add">
+
+      <div id="leftPage">
+        <!-- Task Manager -->  
+        <div id="task-manager">  
+          <h2>Task Manager</h2>
+
+          <!--Add buttons to initiate auth sequence and sign out-->
+          <div id="signInButton">
+            <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>  
+          </div>
+          
+
+          <div id="inner-container-TM">
+            <div id="add-events">
+              <h3>Add Events</h3>
+              <p>Event Title:</p>
+              <input type="text" id="event-title" placeholder="Event Title">
+              <p>Start Time:</p>
+              <input type="datetime-local" id="event-start" placeholder="Start Time">
+              <p>End Time:</p>
+              <input type="datetime-local" id="event-end" placeholder="End Time">
+              <button id="add-event-button" onclick="addEvent()">Add Event</button>
+            </div>
+            <div id="content"></div>
+            <div id="delete-events">
+              <p>Select an event to delete:</p>
+              <input type="text" id="event-select" placeholder="Event Title"></input>
+              <button id="delete-event-button" onclick="deleteEvent(document.getElementById('event-select').value)">Delete Event</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather -->
+      <div id="rightPage">
+        <h3 id="monthAndYear"></h3>
+				<div class="button-container-calendar">
+					<button id="previous"
+							onclick="previous()">
+						‹
+					</button>
+					<button id="next"
+							onclick="next()">
+						›
+					</button>
+				</div>
+				<table class="table-calendar"
+					id="calendar"
+					data-lang="en">
+					<thead id="thead-month"></thead>
+					<!-- Table body for displaying the calendar -->
+					<tbody id="calendar-body"></tbody>
+				</table>
+				<div class="footer-container-calendar">
+					<label for="month">Jump To: </label>
+					<!-- Dropdowns to select a specific month and year -->
+					<select id="month" onchange="jump()">
+						<option value=0>Jan</option>
+						<option value=1>Feb</option>
+						<option value=2>Mar</option>
+						<option value=3>Apr</option>
+						<option value=4>May</option>
+						<option value=5>Jun</option>
+						<option value=6>Jul</option>
+						<option value=7>Aug</option>
+						<option value=8>Sep</option>
+						<option value=9>Oct</option>
+						<option value=10>Nov</option>
+						<option value=11>Dec</option>
+					</select>
+					<!-- Dropdown to select a specific year -->
+					<select id="year" onchange="jump()"></select>
+				</div>
+
+        <div id="weather">
+            <h2>Live Weather</h2>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <div id="citySuggestions"></div>
+            <div id="weatherResult"></div>
+            <button id="getLocationWeather">Get Weather by Location</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chat with AI section -->
+    <button id="openBtn">Chat with AI</button>
+
+    <div id="side-popup">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <br>
+      <h2>Chat with AI</h2  >
+      <form id="tips-form">
+        <textarea id="User-prompt" rows="4" placeholder="E.g., How to bake a chocolate cake?"></textarea>
+        <button id="tips-submit">Get Tips</button>
+        <button id="copyBtn">Copy</button>
+        <button id="clearBtn">Clear</button>
+      </form>
+      <div id="AI-suggestions"><p></p></div>
+    </div>
+    
+
+    
+
+  </main>
+</body>
+<script src="./scripts/script1.js"></script>
+<script src="./scripts/script2.js"></script>
+<script src="./scripts/script3.js"></script>
+<script src="./scripts/script4.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</html>
+
+</body>
+</html>

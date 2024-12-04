@@ -1,0 +1,60 @@
+#task-manager {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+}
+
+#task-manager h2 {
+  color: rgb(18, 33, 36);
+}
+
+#inner-container-TM div {
+  width: 95%;
+}
+
+#inner-container-TM {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#add-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  height: 60%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  height: 60%;
+  max-height: 60%;
+}
+
+#signInButton {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+#delete-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  height: 60%;
+}
