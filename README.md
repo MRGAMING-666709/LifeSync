@@ -7,8 +7,8 @@ LifeSync is a web-based application designed to synchronize and manage various p
 - User-friendly interface
 
 ## DEMO ACCOUNT FOR THE USAGE
-- EMAIL:
-- PASSWORD: 
+- EMAIL: lifesynctrial@gmail.com
+- PASSWORD: Life-Sync-66
 
 ```bash
 git clone https://github.com/MRGAMING-666709/LifeSync.git
