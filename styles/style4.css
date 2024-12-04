@@ -170,11 +170,6 @@ body {
 	/* Sunday */
 }
 
-.date-picker:nth-child(7) {
-	color: green;
-	/* Friday */
-}
-
 /* Hover effect for date cells */
 .date-picker:hover {
 	background-color: green;
