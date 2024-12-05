@@ -1,6 +1,6 @@
 async function generateWeatherSuggestions(data) {
 
-    const inputText = `the weather is ${data.weather[0].main} suggest me what can i do today in one line and make it sound pleasant.`;
+    const inputText = `the weather is ${data.weather[0].main} suggest me what task should i do or not do today and make it sound pleasant.`;
     const outputDiv = document.getElementById('weather-related-suggestions');
     
     const apiKey = 'AIzaSyDYnMX_9GAWlc6cJ_TKj85OfUaBjkDlzL8';
